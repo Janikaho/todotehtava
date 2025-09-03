@@ -1,5 +1,6 @@
 import {Link, useNavigate} from "react-router-dom"
 import { useUser } from "../context/useUser"
+import '../App.css';
 
 export const AuthenticationMode=Object.freeze({
     SignIn:'Login',
@@ -26,7 +27,7 @@ export default function Authentication({authenticationMode}) {
     }
 
     return (
-        <div>
+        <div className="auth-container">
             <h3>{authenticationMode=== AuthenticationMode.SignIn?
             'Sign in': 'Sign up'}</h3>
             <form onSubmit={handleSubmit}>
